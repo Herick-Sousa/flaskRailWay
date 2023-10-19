@@ -6,6 +6,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    with open("txt.txt", "w") as file:
+        file.write("TESTE")
+    
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
 
